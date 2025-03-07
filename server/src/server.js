@@ -1,6 +1,9 @@
-require("dotenv").config();
-const express = require("express");
+const { configureAndRunServer } = require("./config/express");
+const database = require("./config/database");
 
-const app = express();
+function start() {
+  configureAndRunServer();
+  //runDatabase();
+}
 
-app.use(5000, () => console.log("Server On"));
+start();
