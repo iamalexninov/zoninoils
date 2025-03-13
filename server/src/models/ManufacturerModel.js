@@ -13,16 +13,16 @@ const manufactorerSchema = new mongoose.Schema({
   description: {
     type: String,
   },
+  website: {
+    type: String,
+  },
+  country: {
+    type: String,
+  },
   active: {
     type: Boolean,
     default: true,
   },
-  productCategory: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "ProductCategory",
-    },
-  ],
   createdAt: {
     type: Date,
     default: Date.now,
@@ -31,10 +31,10 @@ const manufactorerSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-  creator: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "User",
-  },
+  // creator: {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: "User",
+  // },
 });
 
 const Manufactorer = mongoose.model("Manufactorer", manufactorerSchema);
