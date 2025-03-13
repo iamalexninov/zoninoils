@@ -1,14 +1,11 @@
 const mongoose = require("mongoose");
 
 const manufactorerSchema = new mongoose.Schema({
-  sku: {
+  name: {
     type: String,
     required: true,
     trim: true,
     unique: true,
-  },
-  name: {
-    type: String,
   },
   logo: {
     type: String,
@@ -40,6 +37,6 @@ const manufactorerSchema = new mongoose.Schema({
   },
 });
 
-const Manufactorer = model("Manufactorer", manufactorerSchema);
+const Manufactorer = mongoose.model("Manufactorer", manufactorerSchema);
 
 module.exports = Manufactorer;
