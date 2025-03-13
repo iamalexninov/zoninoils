@@ -1,9 +1,9 @@
 const { configureAndRunServer } = require("./config/express");
-const database = require("./config/database");
+const connectDB = require("./config/database");
 
 function start() {
   configureAndRunServer();
-  //runDatabase();
+  connectDB();
 }
 
 start();
